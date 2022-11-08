@@ -15,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.stormbird.alphawallet</string>
+	<string>com.stormbird.alphawallet-leven</string>
 	<key>PROJECT_ID</key>
 	<string>alphawallet-668d1</string>
 	<key>STORAGE_BUCKET</key>

@@ -2,19 +2,32 @@
 
 import UIKit
 
+import UniPass_Swift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     private var appCoordinator: AppCoordinator!
-
+    lazy var uniPass = UniPassController(option: UniPassOption(nodeRPC: "https://node.wallet.unipass.id/bsc-testnet",
+                                                               env: .testnet,
+                                                               domain: "testnet.wallet.unipass.id",
+                                                               proto: "https",
+                                                               appSetting: AppSetting(appName: "UniPass Swift", appIcon: "", theme: UniPassTheme.dark, chainType: ChainType.bsc)))
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         do {
             appCoordinator = try AppCoordinator.create()
             appCoordinator.start(launchOptions: launchOptions)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                self.showUniPass()
+            }
         } catch {
             //no-op
         }
 
         return true
+    }
+    @objc func showUniPass() {
+        uniPass.connect(in: UIApplication.shared.keyWindow!.rootViewController!) { account, errMSg in
+
+        }
     }
 
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {

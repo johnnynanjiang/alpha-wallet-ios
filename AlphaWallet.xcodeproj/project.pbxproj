@@ -4456,7 +4456,7 @@
 			packageReferences = (
 				87FBF2AF28056AC200616B7D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				87BDF46E28423DC30018DC68 /* XCRemoteSwiftPackageReference "WalletConnectSwiftV2" */,
-				877239CC28F806820062DC14 /* XCRemoteSwiftPackageReference "WalletConnectSwift" */,
+				877239CC28F806820062DC14 /* XCRemoteSwiftPackageReference "WalletConnectSwift.git" */,
 			);
 			productRefGroup = 2912CCF61F6A830700C6CBE3 /* Products */;
 			projectDirPath = "";
@@ -4569,13 +4569,15 @@
 			files = (
 			);
 			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
 			);
 			name = R.Swift;
 			outputPaths = (
+				"\"$SRCROOT/AlphaWallet/R.generated.swift\"",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate --disable-input-output-files-validation \"$SRCROOT/AlphaWallet/R.generated.swift\"\n";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate  \"$SRCROOT/AlphaWallet/R.generated.swift\"\n";
 		};
 		3CA0FD4DF4722D0AEF7CB3EF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -4651,7 +4653,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\nSCHEMA_PATH=\"${SRCROOT}/modules/AlphaWalletFoundation/AlphaWalletFoundation/NFT/Enjin\"\n\ncd \"${SCHEMA_PATH}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"${SCHEMA_PATH}/schema.json\" API.swift\n#Download graphql scheme \n#\"${SCRIPT_PATH}\"/run-bundled-codegen.sh schema:download --endpoint=\"https://cloud.enjin.io/graphql/default\" API.swift\n";
+			shellScript = "# Don't run this during index builds\nexport http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;export ALL_PROXY=socks5://127.0.0.1:1086\n\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\nSCHEMA_PATH=\"${SRCROOT}/modules/AlphaWalletFoundation/AlphaWalletFoundation/NFT/Enjin\"\n\ncd \"${SCHEMA_PATH}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"${SCHEMA_PATH}/schema.json\" API.swift\n#Download graphql scheme \n#\"${SCRIPT_PATH}\"/run-bundled-codegen.sh schema:download --endpoint=\"https://cloud.enjin.io/graphql/default\" API.swift\n";
 		};
 		87FBF2B828056D8600616B7D /* Upload debug symbols to Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -5920,6 +5922,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = CY7E3TGY9H;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5938,7 +5941,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = "$(ALPHAWALLET_PRODUCT_BUNDLE_IDENTIFIER)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stormbird.alphawallet-leven";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h ";
 				SWIFT_VERSION = 4.2;
@@ -5960,6 +5963,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CY7E3TGY9H;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5977,7 +5981,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "$(ALPHAWALLET_PRODUCT_BUNDLE_IDENTIFIER)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stormbird.alphawallet-leven";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "$(SWIFT_MODULE_NAME)-Swift.h ";
 				SWIFT_VERSION = 4.2;
@@ -5992,6 +5996,8 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				DEVELOPMENT_TEAM = CY7E3TGY9H;
 				INFOPLIST_FILE = AlphaWalletTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -6013,6 +6019,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = CY7E3TGY9H;
 				INFOPLIST_FILE = AlphaWalletTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -6037,6 +6044,7 @@
 				CODE_SIGN_ENTITLEMENTS = AlphaWalletSafariExtension/AlphaWalletSafariExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = CY7E3TGY9H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlphaWalletSafariExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = AlphaWalletSafariExtension;
@@ -6053,7 +6061,7 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.stormbird.alphawallet.AlphaWalletSafariExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stormbird.alphawallet-leven.AlphaWalletSafariExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -6071,6 +6079,7 @@
 				CODE_SIGN_ENTITLEMENTS = AlphaWalletSafariExtension/AlphaWalletSafariExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = CY7E3TGY9H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlphaWalletSafariExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = AlphaWalletSafariExtension;
@@ -6086,7 +6095,7 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.stormbird.alphawallet.AlphaWalletSafariExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stormbird.alphawallet-leven.AlphaWalletSafariExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -6104,6 +6113,7 @@
 				CODE_SIGN_ENTITLEMENTS = AlphaWalletShare/AlphaWalletShare.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = CY7E3TGY9H;
 				INFOPLIST_FILE = AlphaWalletShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -6114,7 +6124,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = NO;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.stormbird.alphawallet.AlphaWalletShare;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stormbird.alphawallet-leven.AlphaWalletShare";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -6131,6 +6141,7 @@
 				CODE_SIGN_ENTITLEMENTS = AlphaWalletShare/AlphaWalletShare.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = CY7E3TGY9H;
 				INFOPLIST_FILE = AlphaWalletShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -6139,7 +6150,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_FAST_MATH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.stormbird.alphawallet.AlphaWalletShare;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.stormbird.alphawallet-leven.AlphaWalletShare";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -6198,7 +6209,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		877239CC28F806820062DC14 /* XCRemoteSwiftPackageReference "WalletConnectSwift" */ = {
+		877239CC28F806820062DC14 /* XCRemoteSwiftPackageReference "WalletConnectSwift.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AlphaWallet/WalletConnectSwift.git";
 			requirement = {
@@ -6210,8 +6221,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/WalletConnect/WalletConnectSwiftV2";
 			requirement = {
-				branch = main;
-				kind = branch;
+				kind = revision;
+				revision = 7ec5c06e5a67371398cda219a0cc9282c6541465;
 			};
 		};
 		87FBF2AF28056AC200616B7D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
@@ -6227,7 +6238,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		877239CD28F806820062DC14 /* WalletConnectSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 877239CC28F806820062DC14 /* XCRemoteSwiftPackageReference "WalletConnectSwift" */;
+			package = 877239CC28F806820062DC14 /* XCRemoteSwiftPackageReference "WalletConnectSwift.git" */;
 			productName = WalletConnectSwift;
 		};
 		87BDF46F28423DC30018DC68 /* WalletConnect */ = {

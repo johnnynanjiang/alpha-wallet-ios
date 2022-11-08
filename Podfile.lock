@@ -71,14 +71,14 @@ PODS:
   - CocoaLumberjack/Swift (3.7.0):
     - CocoaLumberjack/Core
   - CombineExt (1.8.0)
-  - CryptoSwift (1.5.1)
+  - CryptoSwift (1.6.0)
   - EthereumABI (1.3.0):
     - BigInt (~> 3.1)
     - CryptoSwift (~> 1.0)
     - EthereumAddress (~> 1.3)
   - EthereumAddress (1.3.0):
     - CryptoSwift (~> 1.0)
-  - FloatingPanel (2.5.2)
+  - FloatingPanel (2.5.5)
   - iOSSnapshotTestCase (6.2.0):
     - iOSSnapshotTestCase/SwiftSupport (= 6.2.0)
   - iOSSnapshotTestCase/Core (6.2.0)
@@ -88,12 +88,12 @@ PODS:
     - Result (~> 3.0)
   - Kanna (5.0.0)
   - KeychainSwift (10.0.0)
-  - Kingfisher (7.2.1)
+  - Kingfisher (7.4.1)
   - MailchimpSDK (2.0.4)
   - MBProgressHUD (1.2.0)
-  - Mixpanel-swift (3.2.0):
-    - Mixpanel-swift/Complete (= 3.2.0)
-  - Mixpanel-swift/Complete (3.2.0)
+  - Mixpanel-swift (3.5.1):
+    - Mixpanel-swift/Complete (= 3.5.1)
+  - Mixpanel-swift/Complete (3.5.1)
   - PaperTrailLumberjack/Core (0.1.9):
     - CocoaAsyncSocket (~> 7.6)
     - CocoaLumberjack (~> 3.4)
@@ -113,7 +113,7 @@ PODS:
   - PromiseKit/UIKit (6.3.5):
     - PromiseKit/CorePromise
   - QRCodeReaderViewController (4.0.2)
-  - R.swift (5.4.0):
+  - R.swift (6.1.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
   - Realm (10.27.0):
@@ -141,7 +141,8 @@ PODS:
     - TrustWalletCore/Types
   - TrustWalletCore/Types (2.6.34):
     - SwiftProtobuf
-  - xcbeautify (0.11.0)
+  - UniPass-Swift (0.0.1)
+  - xcbeautify (0.15.0)
 
 DEPENDENCIES:
   - AlphaWalletAddress (from `.`)
@@ -173,6 +174,7 @@ DEPENDENCIES:
   - SwiftLint (= 0.40.3)
   - TrezorCrypto (from `https://github.com/AlphaWallet/trezor-crypto-ios.git`, commit `50c16ba5527e269bbc838e80aee5bac0fe304cc7`)
   - TrustKeystore (from `https://github.com/AlphaWallet/latest-keystore-snapshot`, commit `c0bdc4f6ffc117b103e19d17b83109d4f5a0e764`)
+  - UniPass-Swift (from `https://github.com/LevenWin/UniPass-Swift.git`, branch `master`)
   - xcbeautify
 
 SPEC REPOS:
@@ -253,6 +255,9 @@ EXTERNAL SOURCES:
   TrustKeystore:
     :commit: c0bdc4f6ffc117b103e19d17b83109d4f5a0e764
     :git: https://github.com/AlphaWallet/latest-keystore-snapshot
+  UniPass-Swift:
+    :branch: master
+    :git: https://github.com/LevenWin/UniPass-Swift.git
 
 CHECKOUT OPTIONS:
   AlphaWalletWeb3Provider:
@@ -279,6 +284,9 @@ CHECKOUT OPTIONS:
   TrustKeystore:
     :commit: c0bdc4f6ffc117b103e19d17b83109d4f5a0e764
     :git: https://github.com/AlphaWallet/latest-keystore-snapshot
+  UniPass-Swift:
+    :commit: 7a05562d1db3e7c2c5e8bdc6d9a61842a1a1fc96
+    :git: https://github.com/LevenWin/UniPass-Swift.git
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -299,22 +307,22 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   CombineExt: c4daa97ef75754d8ef319bd79edeef82652f3eea
-  CryptoSwift: c4f2debceb38bf44c80659afe009f71e23e4a082
+  CryptoSwift: 562f8eceb40e80796fffc668b0cad9313284cfa6
   EthereumABI: c021720744d260b87def6aa45d94554d260cb5a9
   EthereumAddress: 39fe8e11cf04e4e9902b55ae653dbc4e0aee5f30
-  FloatingPanel: 935712d7a8076630135fbbd47f717700913efef9
+  FloatingPanel: a27e7827e0f710fa6236fe2596dd1b5484cb4fc1
   iOSSnapshotTestCase: 9ab44cb5aa62b84d31847f40680112e15ec579a6
   JSONRPCKit: b2991f2f242d72022083f9d869140dabd26d65c7
   Kanna: a32875df62975f8f4b871e933b4ea1a5c3b8be0f
   KeychainSwift: c0d1b0c2901b9873f07f0e560fde92929069e863
-  Kingfisher: 7c084bebf7d548c623ad41bcf765fb200efed369
+  Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
   MailchimpSDK: 794fd7cb1095e55c764d8a699eb11fb61849ed76
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  Mixpanel-swift: 7c0b15c3ea96a997a989737612a3e62e72c1c561
+  Mixpanel-swift: 89d88f4d3dd1b4b3b69bd05060756eb1248b76f0
   PaperTrailLumberjack: 449587968d5aeb3eab2d4de041ffc61ee2d49f25
   PromiseKit: 32c36425387e9cfc7f1206f27bfd906d0b53c0d6
   QRCodeReaderViewController: e8f27d035b3e72b1d4b1c61ff66458287e3be0ff
-  R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
+  R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   Realm: 9ca328bd7e700cc19703799785e37f77d1a130f2
   RealmSwift: 271de77b09a73c5e46ee3252283878153bd5d288
@@ -330,8 +338,9 @@ SPEC CHECKSUMS:
   TrezorCrypto: bfeea47a052dca2c77d4a39e1e183865e52de14d
   TrustKeystore: 3d8b4571c66648fb985015c96b3185440bb837fe
   TrustWalletCore: a92d85baa15932279cce925559e93695558cafdd
-  xcbeautify: b2c6b50c9cab6414296898e94cd153e4ea879662
+  UniPass-Swift: 98f4e266939645b0b14310cb9c38f0703bffcdbc
+  xcbeautify: df17aa32d769add7af523a8be9b0ef8fb9eb75a8
 
-PODFILE CHECKSUM: b527af775f28dc3a2207db0692c4a97f878195f0
+PODFILE CHECKSUM: 275e4e6523bba1abbc3106c202def156d3e011f0
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.11.0
