@@ -141,7 +141,7 @@ PODS:
     - TrustWalletCore/Types
   - TrustWalletCore/Types (2.6.34):
     - SwiftProtobuf
-  - UniPass-Swift (0.0.1)
+  - UniPass_Swift (0.0.1)
   - xcbeautify (0.15.0)
 
 DEPENDENCIES:
@@ -174,7 +174,7 @@ DEPENDENCIES:
   - SwiftLint (= 0.40.3)
   - TrezorCrypto (from `https://github.com/AlphaWallet/trezor-crypto-ios.git`, commit `50c16ba5527e269bbc838e80aee5bac0fe304cc7`)
   - TrustKeystore (from `https://github.com/AlphaWallet/latest-keystore-snapshot`, commit `c0bdc4f6ffc117b103e19d17b83109d4f5a0e764`)
-  - UniPass-Swift (from `https://github.com/LevenWin/UniPass-Swift.git`, branch `master`)
+  - UniPass_Swift (from `https://github.com/LevenWin/UniPass-Swift.git`, branch `master`)
   - xcbeautify
 
 SPEC REPOS:
@@ -255,7 +255,7 @@ EXTERNAL SOURCES:
   TrustKeystore:
     :commit: c0bdc4f6ffc117b103e19d17b83109d4f5a0e764
     :git: https://github.com/AlphaWallet/latest-keystore-snapshot
-  UniPass-Swift:
+  UniPass_Swift:
     :branch: master
     :git: https://github.com/LevenWin/UniPass-Swift.git
 
@@ -284,8 +284,8 @@ CHECKOUT OPTIONS:
   TrustKeystore:
     :commit: c0bdc4f6ffc117b103e19d17b83109d4f5a0e764
     :git: https://github.com/AlphaWallet/latest-keystore-snapshot
-  UniPass-Swift:
-    :commit: 7a05562d1db3e7c2c5e8bdc6d9a61842a1a1fc96
+  UniPass_Swift:
+    :commit: 120710a0ae20da4452676fb85a9cf7dd5d1594e6
     :git: https://github.com/LevenWin/UniPass-Swift.git
 
 SPEC CHECKSUMS:
@@ -338,9 +338,9 @@ SPEC CHECKSUMS:
   TrezorCrypto: bfeea47a052dca2c77d4a39e1e183865e52de14d
   TrustKeystore: 3d8b4571c66648fb985015c96b3185440bb837fe
   TrustWalletCore: a92d85baa15932279cce925559e93695558cafdd
-  UniPass-Swift: 98f4e266939645b0b14310cb9c38f0703bffcdbc
+  UniPass_Swift: f12ff645b4a750dfdade15ab51e9623a2c6ff498
   xcbeautify: df17aa32d769add7af523a8be9b0ef8fb9eb75a8
 
-PODFILE CHECKSUM: 275e4e6523bba1abbc3106c202def156d3e011f0
+PODFILE CHECKSUM: f6e6cc482667971d95aaf89650a443ed35581a47
 
 COCOAPODS: 1.11.0

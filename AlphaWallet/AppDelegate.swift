@@ -2,7 +2,7 @@
 
 import UIKit
 
-import UniPass-Swift
+import UniPass_Swift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
