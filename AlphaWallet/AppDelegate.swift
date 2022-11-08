@@ -2,7 +2,8 @@
 
 import UIKit
 
-import UniPass_Swift
+import UniPass-Swift
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     private var appCoordinator: AppCoordinator!
