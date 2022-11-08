@@ -6,6 +6,8 @@ target 'AlphaWallet' do
   use_frameworks!
   pod 'BigInt', '~> 3.1'
   pod 'R.swift'
+#  pod 'UniPass_Swift', :path => '../UniPass-Swift'
+  pod 'UniPass_Swift', :git => 'https://github.com/LevenWin/UniPass-Swift.git', :branch => "master"
   pod 'MBProgressHUD'
   pod 'StatefulViewController'
   pod 'QRCodeReaderViewController', :git=>'https://github.com/AlphaWallet/QRCodeReaderViewController.git', :commit=>'30d1a2a7d167d0d207ae0ae3a4d81bcf473d7a65'
